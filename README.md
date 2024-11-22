@@ -1,4 +1,30 @@
-This script provides a solution to calculate the costs associated with AWS Lambda functions. It automates the process of retrieving Lambda metrics using the AWS SDK, calculates costs based on metrics like memory usage, invocations, and execution time, and generates a detailed cost report in a CSV file.
+# What is this?
+
+This node.js script provides a solution to calculate the costs associated with AWS Lambda functions. It automates the process of retrieving Lambda metrics using the AWS SDK, calculates costs based on metrics like memory usage, invocations, and execution time, and generates a detailed cost report in a CSV file.
+
+# How to Use
+
+The script requires access to an AWS account in the specified region. This can be achieved by setting up environment variables.
+
+```
+export AWS_ACCESS_KEY_ID=•••••
+export AWS_SECRET_ACCESS_KEY=•••••
+export AWS_REGION=us-east-1
+```
+
+Next, clone the repository and install the dependency.
+
+```
+git clone git@github.com:meap/lambda-costs.git
+cd lambda-costs/
+npm install
+```
+
+Define the period (by months) for which you want to get metrics in the costs.js file. And run the command:
+
+```
+npm run start
+```
 
 # Output
 
@@ -42,3 +68,7 @@ The output is in CSV format and can be easily imported into Google Sheets. Here 
 | Hawk           |                 256 |                  512 |             0 |                      0 |            0        |             0     |            0     |            0.00|
 | Owl            |                 256 |                  512 |             0 |                      0 |            0        |             0     |            0     |            0.00|
 | Rabbit         |                1024 |                  512 |             0 |                      0 |            0        |             0     |            0     |            0.00|
+
+# License
+
+The MIT License.
