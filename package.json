@@ -1,0 +1,27 @@
+{
+  "name": "fetch-lambda-metrics",
+  "version": "1.0.0",
+  "description": "A Node.js script to fetch AWS Lambda metrics and calculate costs using AWS SDK v3.",
+  "main": "costs.js",
+  "type": "module",
+  "scripts": {
+    "start": "node costs.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.318.0",
+    "@aws-sdk/client-lambda": "^3.318.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "aws",
+    "lambda",
+    "metrics",
+    "cloudwatch",
+    "costs",
+    "sdk-v3"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
